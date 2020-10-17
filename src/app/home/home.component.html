@@ -1,0 +1,37 @@
+<div class="main">
+  <h2 class="main-heading">Select Venue</h2>
+<div class="container">
+  <div class="row" *ngFor="let home of home">
+    <div class="col-sm-4"><img src={{home.imgURL}} alt="img1" /></div>
+    <div class="col-sm-8">
+      <div class="table-responsive">
+        <table class="table table-borderless">
+          <tr>
+            <th id="heading" colspan="4">{{home.venue}}</th>
+            <td class="rating" colspan="2"><button id="rate">{{home.star}}<span>&#9734;</span> </button> {{home.rating}}Rating </td>
+          </tr>
+          <tr>
+            <td colspan="5">{{home.venueaddress}}</td>
+          </tr>
+          <tr>
+            <div class="row" id="featuresdiv">
+
+              <div *ngFor="let features of home.features" id="features">
+                <i class="far fa-check-circle"></i>{{features}}
+              </div>
+
+            </div>
+          </tr>
+             <tr>
+              <td colspan="3"><span id="supscript"><span>&#8377;</span>{{home.price}}(incl. tax)</span><br /><span id="subscript"><span>&#8377;</span>{{home.pp}}per pax </span> </td>
+              <td><button id="btn1"><a href="#">View Details</a></button></td>
+              <td><button id="btn2"><a href="#">Add to Cart</a></button></td>
+                </tr>
+             <br />
+         </table>
+       </div>
+      
+      </div>
+    </div>
+  </div>
+</div>

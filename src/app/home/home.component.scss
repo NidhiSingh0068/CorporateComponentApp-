@@ -1,0 +1,109 @@
+.main-heading{
+   padding-left:50px;
+}
+
+.col-sm-8 {
+  color: #000066;
+}
+
+h2 {
+  color: #000066;
+  font-weight: bold;
+  font-family: Arial Narrow;
+}
+
+#text {
+  color: #000066;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Arial Narrow;
+}
+
+.col-sm-4 img{
+  height:230px;
+  width: 370px;
+  object-fit: cover;
+}
+
+#heading {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: left;
+}
+
+#supscript {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#subscript {
+  font-size: 13px;
+}
+
+#btn1 {
+  height: 35px;
+  width: 150px;
+  background: #ffffff;
+  font-weight: 3px;
+  border: 2px solid #ff0066;
+  color: #ff0066;
+}
+
+#btn2 {
+  height: 35px;
+  width: 150px;
+  background: #ff0066;
+  color: #ffffff;
+  
+}
+
+#btn1 a {
+  color: #ff0066;
+  text-decoration: none;
+}
+
+#btn2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.rating {
+  color: green;
+}
+
+#rate {
+  background: green;
+  color: #ffffff;
+  width: 50px;
+}
+
+i {
+  color: green;
+}
+
+@media (max-width: 591px) {
+  .responsive > td,
+  .responsive > th {
+    display: block;
+  }
+  }
+
+
+.columns {
+  columns: 4;
+}
+
+#features {
+  display: flex;
+  justify-content: space-between;
+  max-width: 700px;
+  margin-left: 30px;
+  position: relative;
+}
+
+#featuresdiv {
+  display: flex;
+  justify-content: space-between;
+  width:100%
+}
+

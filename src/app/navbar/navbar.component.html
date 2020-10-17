@@ -1,0 +1,96 @@
+ <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
+
+    <table class="nav-table">
+      <tr>
+          <th>Location Filters</th>
+      </tr>
+      <tr>
+          <td>
+             <input class="form-control" type="text" placeholder="   S e a r c h . . .">
+          </td>
+      </tr>
+      <tr>
+        <td>x</td>
+      </tr>
+      <tr>
+        <td>y</td>
+      </tr>
+      <tr>
+         <th id="more">+More</th>
+      </tr>
+      <tr>
+         <th>Price Range</th>
+      </tr>
+      <tr>
+         <th>
+           <div class="custom-slider">
+               <ng5-slider [(value)]="value" [(highValue)]="highValue" [options]="options"></ng5-slider>
+           </div>
+         </th>
+      </tr>
+      <tr>
+          <th>Package Offerings</th>
+      </tr>
+      <tr>
+          <td><a href="#" target="_blank">Venue</a></td>
+      </tr>
+      <tr>
+          <td><a href="#" target="_blank">Food & Beverages</a></td>
+      </tr>
+      <tr>
+          <td><a href="#" target="_blank">Outdoor Activities</a></td>
+      </tr>
+      <tr>
+          <th id="more">+More</th>
+      </tr>
+      <tr>
+         <th>Services</th>
+      </tr>
+      <tr>
+          <td><a href="#" target="_blank">Momento</a></td>
+      </tr>
+      <tr>
+           <td><a href="#" target="_blank">Cake</a></td>
+      </tr>
+      <tr>
+           <td><a href="#" target="_blank">Bouquet</a></td>
+      </tr>
+      <tr>
+           <th id="more">+More</th>
+      </tr>
+</table>
+</mat-sidenav>
+  <mat-sidenav-content>
+
+    <mat-toolbar>
+      <button type="button"
+              aria-label="Toggle sidenav"
+              mat-stroked-button
+              (click)="drawer.toggle()"
+              *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <table>
+        <tr>
+          <td>
+             <button id="view">View in Map</button>
+          </td>
+         <td>
+             <button id="view">Popularity<span>&#9660;</span></button>
+         </td>
+        </tr>
+      </table>
+    </mat-toolbar>
+   <ng-content></ng-content>
+    <!-- Add Content Here -->
+    <router-outlet></router-outlet>
+              
+  </mat-sidenav-content>
+
+  
+
+</mat-sidenav-container>
